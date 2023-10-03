@@ -49,12 +49,9 @@ class TextSizeAdapter (private val textSizes: Array<Int>, private var callback: 
                 // Get the position of the clicked item
                 val position = adapterPosition
 
-                    // Retrieve the selected number from the textSizes array using the position
                     val selectedNumber = textSizes[position]
-
-                    // Call the callback with the selected number
                     callback(selectedNumber)
-                    //callback(textSizes[adapterPosition])
+
 
 
             }
