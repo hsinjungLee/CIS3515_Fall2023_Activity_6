@@ -46,11 +46,9 @@ class TextSizeAdapter (private val textSizes: Array<Int>, private var callback: 
     inner class TextSizeViewHolder(val textView: TextView) : RecyclerView.ViewHolder (textView) {
         init {
             textView.setOnClickListener {
-                // Get the position of the clicked item
                 val position = adapterPosition
-
-                    val selectedNumber = textSizes[position]
-                    callback(selectedNumber)
+                val selectedNumber = textSizes[position]
+                callback(selectedNumber)
 
 
 
