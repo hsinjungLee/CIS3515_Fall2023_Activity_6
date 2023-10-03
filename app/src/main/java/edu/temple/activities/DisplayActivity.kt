@@ -10,15 +10,13 @@ class DisplayActivity : AppCompatActivity() {
         setContentView(R.layout.activity_display)
 
         // TODO Step 3: Extract transferred value and use for lyricsDisplayView text size
-        with (findViewById<TextView>(R.id.lyricsDisplayTextView)) {
+        val selectedNumber = intent.getIntExtra("selectedNumber",20)
 
-            val selectedNumber = intent.getStringExtra("selectedNumber")
-            if (selectedNumber != null) {
-                try {
-                    val textSize = selectedNumber.toInt()
-                    findViewById<TextView>(R.id.lyricsDisplayTextView).textSize = textSize.toFloat()
-                } catch (e: NumberFormatException) {
-                }
+        with (findViewById<TextView>(R.id.lyricsDisplayTextView)) {
+            textSize = selectedNumber.toFloat()
+
+
+
             }
 
 
@@ -26,4 +24,3 @@ class DisplayActivity : AppCompatActivity() {
 
 
     }
-}
